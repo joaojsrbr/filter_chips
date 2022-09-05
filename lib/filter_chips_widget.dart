@@ -1,8 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-
+import 'package:state_change/state_change.dart';
 import 'filter_chips_controller.dart';
-import 'state/state_builder.dart';
 
 class FilterChipsWidget extends StatefulWidget {
   final List<String> filters;
@@ -17,8 +16,7 @@ class FilterChipsWidget extends StatefulWidget {
   State<FilterChipsWidget> createState() => _FilterChipsWidgetState();
 }
 
-class _FilterChipsWidgetState extends State<FilterChipsWidget>
-    with AutomaticKeepAliveClientMixin {
+class _FilterChipsWidgetState extends State<FilterChipsWidget> {
   late final List<String> _filters;
 
   final controller = FilterChipsController();
@@ -32,7 +30,6 @@ class _FilterChipsWidgetState extends State<FilterChipsWidget>
 
   @override
   Widget build(BuildContext context) {
-    super.build(context);
     return Container(
       height: 62,
       alignment: Alignment.bottomCenter,
@@ -83,7 +80,4 @@ class _FilterChipsWidgetState extends State<FilterChipsWidget>
       ),
     );
   }
-
-  @override
-  bool get wantKeepAlive => true;
 }
