@@ -12,8 +12,7 @@ dependencies:
     sdk: flutter
   state_change:
     git:
-      url: https://github.com/joaojsrbr/state_change.git
-      ref: master
+      url: https://github.com/joaojsrbr/state_change
 
 dev_dependencies:
   flutter_test:
