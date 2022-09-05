@@ -15,7 +15,8 @@ class FilterChipsWidget extends StatefulWidget {
   State<FilterChipsWidget> createState() => _FilterChipsWidgetState();
 }
 
-class _FilterChipsWidgetState extends State<FilterChipsWidget> {
+class _FilterChipsWidgetState extends State<FilterChipsWidget>
+    with AutomaticKeepAliveClientMixin {
   late final List<String> _filters;
 
   final controller = FilterChipsController();
@@ -79,4 +80,7 @@ class _FilterChipsWidgetState extends State<FilterChipsWidget> {
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

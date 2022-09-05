@@ -5,3 +5,7 @@
 ## 0.0.2
 
 - add StateChange
+
+## 0.0.3
+
+- add AutomaticKeepAliveClientMixin to FilterChipsWidget
