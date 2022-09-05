@@ -30,6 +30,7 @@ class _FilterChipsWidgetState extends State<FilterChipsWidget>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Container(
       height: 62,
       alignment: Alignment.bottomCenter,
