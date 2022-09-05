@@ -42,6 +42,7 @@ class _FilterChipsWidgetState extends State<FilterChipsWidget>
           shrinkWrap: true,
           physics: const BouncingScrollPhysics(),
           primary: true,
+          key: PageStorageKey('s$value'),
           itemCount: _filters.length,
           itemBuilder: (context, index) => Padding(
             padding: const EdgeInsets.only(right: 10.0),
