@@ -42,14 +42,13 @@ class _FilterChipsWidgetState extends State<FilterChipsWidget>
           shrinkWrap: true,
           physics: const BouncingScrollPhysics(),
           primary: true,
-          key: PageStorageKey('s$value'),
           itemCount: _filters.length,
           itemBuilder: (context, index) => Padding(
             padding: const EdgeInsets.only(right: 10.0),
             child: InkWell(
               onLongPress: null,
               child: FilterChip(
-                key: ObjectKey(value),
+                key: ObjectKey(_filters[index]),
                 shape: RoundedRectangleBorder(
                   side: const BorderSide(
                     color: Colors.transparent,
@@ -63,7 +62,7 @@ class _FilterChipsWidgetState extends State<FilterChipsWidget>
                 elevation: 0,
                 checkmarkColor: const Color(0xff2A2939),
                 backgroundColor: const Color(0xff2A2939),
-                selectedColor: const Color(0xff69FF98),
+                selectedColor: const Color.fromARGB(255, 105, 175, 255),
                 label: Text(
                   _filters[index],
                   style: const TextStyle(
