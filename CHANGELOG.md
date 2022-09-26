@@ -9,3 +9,9 @@
 ## 0.0.3
 
 - add AutomaticKeepAliveClientMixin to FilterChipsWidget
+
+## 0.0.4
+
+- add AutomaticKeepAliveClientMixin to FilterChipsWidget
+- add multi_value_listenable_builder.dart
+- remove StateChange

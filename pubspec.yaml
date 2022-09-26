@@ -1,6 +1,6 @@
 name: filter_chips
 description: A new Flutter package project.
-version: 0.0.3
+version: 0.0.4
 publish_to: none
 
 environment:
@@ -10,9 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  state_change:
-    git:
-      url: https://github.com/joaojsrbr/state_change
 
 dev_dependencies:
   flutter_test:
