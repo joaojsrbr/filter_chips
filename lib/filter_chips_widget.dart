@@ -4,28 +4,29 @@ import 'filter_chips_controller.dart';
 import 'multi_value_listenable_builder.dart';
 
 class FilterChipsWidget extends StatefulWidget {
-  const FilterChipsWidget(
-    this.height, {
+  const FilterChipsWidget({
+    this.height,
     super.key,
     this.alignment = Alignment.center,
     required this.filters,
     required this.onChange,
+    this.constraints,
     this.padding,
     this.margin,
   });
   final void Function(List<String> data) onChange;
   final List<String> filters;
-  final double height;
+  final double? height;
   final AlignmentGeometry alignment;
   final EdgeInsetsGeometry? padding;
   final EdgeInsetsGeometry? margin;
+  final BoxConstraints? constraints;
 
   @override
   State<FilterChipsWidget> createState() => _FilterChipsWidgetState();
 }
 
-class _FilterChipsWidgetState extends State<FilterChipsWidget>
-    with AutomaticKeepAliveClientMixin {
+class _FilterChipsWidgetState extends State<FilterChipsWidget> with AutomaticKeepAliveClientMixin {
   late final List<String> _filters;
 
   final FilterChipsController controller = FilterChipsController();
@@ -51,6 +52,7 @@ class _FilterChipsWidgetState extends State<FilterChipsWidget>
       padding: widget.padding,
       margin: widget.margin,
       height: widget.height,
+      constraints: widget.constraints,
       alignment: widget.alignment,
       child: MultiValueListenableBuilder(
         valueListenables: [

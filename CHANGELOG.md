@@ -15,3 +15,7 @@
 - add AutomaticKeepAliveClientMixin to FilterChipsWidget
 - add multi_value_listenable_builder.dart
 - remove StateChange
+
+## 0.0.5
+
+- add BoxConstraints to Container
